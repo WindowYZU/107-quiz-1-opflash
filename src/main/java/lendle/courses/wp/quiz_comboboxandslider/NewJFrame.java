@@ -94,12 +94,8 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
-        JComboBox<String> comboBox=new JComboBox<String>();
-        for(int i=0;i<=100;i=i+10)
-        {
-            comboBox.addItem(""+i);
-        }
-        frame.add(comboBox);
+        int value=jComboBox1.getSelectedIndex();
+        jSlider1.setValue(value);
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     /**
@@ -138,12 +134,12 @@ public class NewJFrame extends javax.swing.JFrame {
         
         frame.add(slider);
         
-        comboBox.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e){
-                text.setText(""+comboBox.getSelectedItem());
-            }
-        }
+        //comboBox.addActionListener(new ActionListener(){
+        //    @Override
+        //    public void actionPerformed(ActionEvent e){
+        //        text.setText(""+comboBox.getSelectedItem());
+        //    }
+        //}
         
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
